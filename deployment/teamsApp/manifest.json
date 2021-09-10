@@ -1,0 +1,41 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.9",
+    "version": "1.0.0",
+    "id": "ba2fce1f-b4f2-418a-a01c-906d4a63095a",
+    "packageName": "io.github.leeford.teams-webchat-sample",
+    "developer": {
+        "name": "Lee Ford",
+        "websiteUrl": "https://www.github.com/leeford/teams-webchat-sample",
+        "privacyUrl": "https://www.github.com/leeford/teams-webchat-sample",
+        "termsOfUseUrl": "https://www.github.com/leeford/teams-webchat-sample"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Web Chat",
+        "full": "Web Chat in Teams"
+    },
+    "description": {
+        "short": "Interact with users via Web Chat",
+        "full": "Interact with external users via Web Chat"
+    },
+    "accentColor": "#48B7A3",
+    "bots": [
+        {
+            "botId": "<Bot ID>",
+            "scopes": [
+                "team"
+            ],
+            "supportsFiles": true,
+            "isNotificationOnly": false
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "fallbackText": "This card requires Adaptive Cards v1.4 support to be rendered properly.",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Channel added to Web Chat as *${displayName}*",
+            "wrap": true
+        }
+    ]
+}

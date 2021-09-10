@@ -1,0 +1,98 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Welcome to Web Chat",
+            "horizontalAlignment": "Center",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "text": "Please complete the following to join Web Chat",
+            "horizontalAlignment": "Center",
+            "wrap": true
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "teamsChannelId",
+            "label": "Category",
+            "choices": [
+                {
+                    "$data": "${teamsChannels}",
+                    "title": "${title}",
+                    "value": "${value}"
+                }
+            ],
+            "placeholder": "Select a category",
+            "isRequired": true,
+            "errorMessage": "Category is required"
+        },
+        {
+            "type": "Input.Text",
+            "label": "Name",
+            "style": "text",
+            "id": "displayName",
+            "isRequired": true,
+            "errorMessage": "Name is required"
+        },
+        {
+            "type": "Input.Text",
+            "label": "Email address",
+            "style": "Email",
+            "id": "emailAddress",
+            "isRequired": true,
+            "errorMessage": "Email address is required",
+            "placeholder": "user@domain.com"
+        },
+        {
+            "type": "Input.Text",
+            "label": "Phone number",
+            "style": "Tel",
+            "id": "phoneNumber",
+            "placeholder": "01234567890"
+        },
+        {
+            "type": "Input.Text",
+            "label": "Subject",
+            "style": "text",
+            "id": "subject",
+            "isRequired": true,
+            "errorMessage": "Subject is required",
+            "placeholder": "What are you contacting us about?"
+        },
+        {
+            "type": "Input.Text",
+            "label": "Description",
+            "style": "text",
+            "isMultiline": true,
+            "id": "description",
+            "isRequired": true,
+            "errorMessage": "Description is required",
+            "placeholder": "Please provide more details about the chat request"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Join chat",
+            "style": "positive",
+            "data": {
+                "action": "joinChatFromWebChat"
+            }
+        },
+        {
+            "type": "Action.Submit",
+            "title": "End chat",
+            "style": "destructive",
+            "data": {
+                "action": "endChatFromWebChat"
+            }
+        }
+    ]
+}

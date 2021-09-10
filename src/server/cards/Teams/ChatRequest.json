@@ -1,0 +1,100 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "fallbackText": "This card requires Adaptive Cards v1.4 support to be rendered properly.",
+    "body": [
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "size": "extraLarge",
+                                    "weight": "bolder",
+                                    "text": "**WEB CHAT REQUEST**",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "stretch",
+                            "verticalContentAlignment": "center"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "STATUS",
+                                    "horizontalAlignment": "right",
+                                    "isSubtle": true,
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${status}",
+                                    "horizontalAlignment": "right",
+                                    "spacing": "None",
+                                    "size": "medium",
+                                    "color": "Attention",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "auto"
+                        }
+                    ]
+                }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "size": "extraLarge",
+                                    "text": "${subject}",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "stretch"
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "spacing": "small",
+                    "size": "small",
+                    "weight": "bolder",
+                    "color": "Accent",
+                    "text": "Chat ID: ${webChatConversationId}"
+                },
+                {
+                    "type": "FactSet",
+                    "spacing": "Small",
+                    "separator": true,
+                    "height": "stretch",
+                    "$data": "${factSet}",
+                    "facts": [
+                        {
+                            "title": "${title}",
+                            "value": "${value}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": []
+}
