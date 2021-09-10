@@ -1,1 +1,1 @@
-# teams-webchat-demo
+# Teams WebChat Sample
